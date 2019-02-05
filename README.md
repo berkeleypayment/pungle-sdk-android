@@ -102,7 +102,7 @@ public class PungleError {
 
     public ValidationError validationError;
     public ErrorType type;
-    public int httpCode;
+    public int code;
     public String message;
 
     // This will be populated if there's an error message being sent by the backend.
