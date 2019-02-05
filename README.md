@@ -75,8 +75,10 @@ Here's an example on how to use:
                         if (err.type == ErrorType.http){
 
                             Log.e("MESSAGES ", err.error.message);
+                            // This code is sent by the server, this is a string.
                             Log.e("CODE ", err.error.code);
-                            Log.e("HTTP CODE ", String.valueOf(err.httpCode));
+                            // In this case this is an http code.
+                            Log.e("HTTP CODE ", String.valueOf(err.code));
                             return;
 
                         }
@@ -98,10 +100,13 @@ Below you can see the PungleError class and its properties or fields.
 ```java
 public class PungleError {
 
-    public ValidationError error;
+    public ValidationError validationError;
     public ErrorType type;
-    public int code;
+    public int httpCode;
     public String message;
+
+    // This will be populated if there's an error message being sent by the backend.
+    public PLError error;
     ...
 ```
 
@@ -117,7 +122,7 @@ enum ErrorType {
 
 #### Local Validation
 
-Validation gets done before the card is sent to the server for processing. Validation errors done locally return an error code of `2010`. They will also return a `ValidationError` enum which you can use to present an error message of your choice, or you can use the `message` String to display an error. The `error` prop (`ValidationError`) can and will be null if the error is not a local validation error.
+Validation gets done before the card is sent to the server for processing. Validation errors done locally return an error code of `2010`. They will also return a `ValidationError` enum which you can use to present an error message of your choice, or you can use the `message` String to display an error. The `validationError` prop can and will be null if the error is not a local validation error.
 
 ```java
 enum ValidationError {
@@ -138,7 +143,7 @@ enum ValidationError {
 
 #### HTTP errors
 
-In the case of an `http` type error, the code will be an http error, and the `message` is sent by the server.
+In the case of an `http` type error, the `code` will be an http error and for more details you should check the `error` field of the `PungleError` being returned. Please look at the example above.
 
 #### Exception error
 
