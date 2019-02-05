@@ -74,8 +74,9 @@ Here's an example on how to use:
                         // HTTP Error
                         if (err.type == ErrorType.http){
 
-                            Log.e("MESSAGES ", err.errors.message);
-                            Log.e("CODE ", String.valueOf(err.code));
+                            Log.e("MESSAGES ", err.error.message);
+                            Log.e("CODE ", err.error.code);
+                            Log.e("HTTP CODE ", String.valueOf(err.httpCode));
                             return;
 
                         }
