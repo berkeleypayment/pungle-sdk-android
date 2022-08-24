@@ -77,14 +77,14 @@ public class CreditCardValidationTest {
         // "Year is in the past so it should fail"
         assertFalse(yearIsValid);
 
-        year = "2019";
+        year = "2022";
         Boolean yearIsTrue = new PungleValidation().yearIsValid(year);
 
         // "Year is valid"
         assertTrue(yearIsTrue);
 
         // "Year is valid"
-        year = "2020";
+        year = "2023";
         yearIsTrue = new PungleValidation().yearIsValid(year);
 
         assertTrue(yearIsTrue);
