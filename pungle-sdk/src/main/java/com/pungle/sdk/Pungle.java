@@ -16,8 +16,8 @@ public class Pungle {
     private static Pungle instance;
     private String publicApiToken;
     public boolean logs = false;
-    public static String STAGING = "https://api.staging.pungle.co/api/v1/";
-    public static String PRODUCTION = "https://api.pungle.io/api/v1/";
+    public static String STAGING = "https://api.staging.pungle.co/api/v2/";
+    public static String PRODUCTION = "https://api.pungle.io/api/v2/";
 
     public Pungle(){}
 
