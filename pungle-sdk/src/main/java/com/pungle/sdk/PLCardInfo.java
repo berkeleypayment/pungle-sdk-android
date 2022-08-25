@@ -73,61 +73,61 @@ public class PLCardInfo {
 
         PungleValidation plValidation = new PungleValidation();
 
-        if ( !plValidation.yearIsValid(this.expiryYear)  ){
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.expiryYear,
-                    "Expiry year incorrect. Either the year is in the past or the number is not well formatted", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if ( !plValidation.yearIsValid(this.expiryYear)  ){
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.expiryYear,
+//                     "Expiry year incorrect. Either the year is in the past or the number is not well formatted", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.addressIsValid(this.addressLine1) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.addressLine1,
-                    "Address line 1 has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.addressIsValid(this.addressLine1) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.addressLine1,
+//                     "Address line 1 has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.addressIsValid(this.addressLine1) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.addressLine2,
-                    "Address line 2 has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.addressIsValid(this.addressLine1) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.addressLine2,
+//                     "Address line 2 has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.cityIsValid(this.addressCity) ) {
-            PungleError error = new PungleError(ErrorType.validation, ValidationError.city,
-                    "City has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.cityIsValid(this.addressCity) ) {
+//             PungleError error = new PungleError(ErrorType.validation, ValidationError.city,
+//                     "City has invalid symbols or it's too long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.countryIsValid(this.addressCountry) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.country,
-                     "Country is too long or it has invalid symbols", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
+//         if (!plValidation.countryIsValid(this.addressCountry) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.country,
+//                      "Country is too long or it has invalid symbols", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
 
-        }
+//         }
 
-        if (!plValidation.stateIsValid(this.addressState) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.state,
-                     "State is too long or it has invalid symbols", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
+//         if (!plValidation.stateIsValid(this.addressState) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.state,
+//                      "State is too long or it has invalid symbols", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
 
-        }
+//         }
 
-        if (!plValidation.postalCodeIsValid(this.addressPostalCode) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.postalCode,
-                    "Postal Code is missing characters ot it's too long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.postalCodeIsValid(this.addressPostalCode) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.postalCode,
+//                     "Postal Code is missing characters ot it's too long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.monthIsValid(this.expiryMonth) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.expiryMonth,
-                    "Expiry month must be 2 digits long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.monthIsValid(this.expiryMonth) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.expiryMonth,
+//                     "Expiry month must be 2 digits long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
-        if (!plValidation.cvvIsValid(this.cvv) ) {
-            PungleError error = new PungleError( ErrorType.validation, ValidationError.cvvNumber,
-                    "CVV code must be 3 to 4 digits long", PungleValidation.VALIDATION_ERR_CODE);
-            errors.add( error );
-        }
+//         if (!plValidation.cvvIsValid(this.cvv) ) {
+//             PungleError error = new PungleError( ErrorType.validation, ValidationError.cvvNumber,
+//                     "CVV code must be 3 to 4 digits long", PungleValidation.VALIDATION_ERR_CODE);
+//             errors.add( error );
+//         }
 
         if (!plValidation.luhnCheckIsValid(this.number) ) {
             PungleError error = new PungleError( ErrorType.validation, ValidationError.cardNumber,
