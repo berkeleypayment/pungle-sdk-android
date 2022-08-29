@@ -39,6 +39,6 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./build/classes/pungle-sdk.aar
+        asset_path: ///home/runner/work/pungle-sdk-android/pungle-sdk-android/app/build/classes/pungle-sdk.aar
         asset_name: pungle-sdk.aar
         asset_content_type: application/gzip
